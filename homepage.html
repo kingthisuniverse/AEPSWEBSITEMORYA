@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Morya Dashboard</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #1565c0;
+    color: white;
+    position: fixed;
+}
+
+.sidebar h2 {
+    padding: 20px;
+    margin: 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #0d47a1;
+}
+
+/* MAIN */
+.main {
+    margin-left: 220px;
+}
+
+/* TOPBAR */
+.topbar {
+    background: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    width: 300px;
+    padding: 8px;
+}
+
+/* FUND BOX */
+.fund-box {
+    background: #e3f2fd;
+    color: #1565c0;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* CARDS */
+.section {
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    width: 150px;
+    height: 120px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>Morya</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Analytics</a>
+    <a href="#">AePS Services</a>
+    <a href="#">Wallet & Transactions</a>
+    <a href="#">Micro ATM</a>
+    <a href="#">Loan Bazaar</a>
+    <a href="#">Tax</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <input class="search" type="text" placeholder="Search services">
+
+        <div style="display:flex; align-items:center; gap:20px;">
+            
+            <!-- AVAILABLE FUND -->
+            <div class="fund-box" id="fund">₹ 0</div>
+
+            <!-- USER -->
+            <div>👤 User</div>
+        </div>
+    </div>
+
+    <!-- AEPS -->
+    <div class="section">
+        <h3>AePS Services</h3>
+        <div class="cards">
+            <div class="card"><div class="icon">💸</div><a href="cash.html">Cash Withdrawal</a></div>
+            <div class="card"><div class="icon">🧾</div><a href="mini.html">Mini Statement</a></div>
+            <div class="card"><div class="icon">🏦</div><a href="balance.html">Balance Enquiry</a></div>
+        </div>
+    </div>
+
+    <!-- WALLET -->
+    <div class="section">
+        <h3>Wallet & Transactions</h3>
+        <div class="cards">
+            <div class="card"><div class="icon">💰</div><a href="payout.html">Payout</a></div>
+            <div class="card"><div class="icon">📄</div><a href="logs.html">Logs</a></div>
+            <div class="card"><div class="icon">📘</div><a href="passbook.html">Passbook</a></div>
+            <div class="card"><div class="icon">⚙️</div><a href="operator.html">Operator</a></div>
+        </div>
+    </div>
+
+    <!-- MICRO ATM -->
+    <div class="section">
+        <h3>Micro ATM Service</h3>
+        <div class="cards">
+            <div class="card"><div class="icon">📟</div><a href="matm_d180.html">MATM D180</a></div>
+            <div class="card"><div class="icon">📠</div><a href="matm_y50.html">MATM Y50</a></div>
+        </div>
+    </div>
+
+    <!-- LOAN -->
+    <div class="section">
+        <h3>Loan Bazaar</h3>
+        <div class="cards">
+            <div class="card"><div class="icon">💳</div><a href="loan.html">Loan</a></div>
+            <div class="card"><div class="icon">💼</div><a href="cards.html">Cards</a></div>
+            <div class="card"><div class="icon">📑</div><a href="emi.html">EMI</a></div>
+        </div>
+    </div>
+
+    <!-- TAX -->
+    <div class="section">
+        <h3>Tax</h3>
+        <div class="cards">
+            <div class="card"><div class="icon">🧾</div><a href="income_tax.html">Income Tax</a></div>
+            <div class="card"><div class="icon">📊</div><a href="gst.html">GST</a></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Dynamic Fund Value
+document.getElementById("fund").innerText = "₹ 12,500";
+</script>
+
+</body>
+</html>

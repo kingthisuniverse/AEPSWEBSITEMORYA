@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cash Withdrawal</title>
+<style>
+body{margin:0;font-family:Arial;background:#eef2f7;}
+.sidebar{width:220px;height:100vh;background:#1565c0;color:#fff;position:fixed;}
+.sidebar h2{padding:20px;}
+.sidebar a{display:block;color:#fff;padding:10px 20px;text-decoration:none;}
+.main{margin-left:220px;padding:20px;}
+.topbar{background:#fff;padding:10px;display:flex;justify-content:space-between;}
+.card{background:#fff;padding:20px;border-radius:10px;width:400px;}
+input,select{width:100%;padding:10px;margin:8px 0;border-radius:5px;border:1px solid #ccc;}
+button{padding:10px;background:#1565c0;color:#fff;border:none;border-radius:5px;margin-top:10px;}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>Morya</h2>
+<a href="dashboard.html">Dashboard</a>
+<a href="cash.html">Cash Withdrawal</a>
+<a href="mini.html">Mini Statement</a>
+<a href="balance.html">Balance Enquiry</a>
+</div>
+
+<div class="main">
+
+<div class="topbar">
+<input placeholder="Search">
+<div>₹ 12,500 👤 User</div>
+</div>
+
+<h3>Cash Withdrawal</h3>
+
+<div style="display:flex; gap:30px;">
+<div class="card">
+<h4>Customer Details</h4>
+
+<select>
+<option>Select Bank</option>
+<option>State Bank of India</option>
+<option>HDFC Bank</option>
+<option>ICICI Bank</option>
+<option>Axis Bank</option>
+<option>Punjab National Bank</option>
+<option>Bank of Baroda</option>
+<option>Canara Bank</option>
+<option>Union Bank of India</option>
+<option>Indian Bank</option>
+<option>IDBI Bank</option>
+</select>
+
+<input type="text" placeholder="Aadhar Number" maxlength="12" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+
+<input type="text" placeholder="Mobile Number" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+
+<input placeholder="Amount">
+
+<button>Capture</button>
+</div>
+
+<div class="card">
+<h4>Instructions</h4>
+<p>Ensure biometric device connected.</p>
+<p>Network stable hona chahiye.</p>
+</div>
+</div>
+
+</div>
+</body>
+</html>
